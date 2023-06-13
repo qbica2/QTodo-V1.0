@@ -8,13 +8,33 @@
 import SwiftUI
 
 struct ListView: View {
+    
+    @State private var todos: [TodoModel] = [
+        TodoModel(content: "firstTodo", isCompleted: true),
+        TodoModel(content: "secondTodo", isCompleted: false),TodoModel(content: "qweqweqw", isCompleted: false),
+        TodoModel(content: "asdasdas", isCompleted: false),TodoModel(content: "faggfgfgf", isCompleted: true),
+        TodoModel(content: "eererere", isCompleted: true)
+    ]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            List {
+                ForEach(todos) { todo in
+                    TodoView(todo: todo)
+                }
+                .padding(.vertical, 5)
+            }
+            .listStyle(.grouped) 
+        }
+        
+        .navigationTitle("QTodo v1.0")
     }
 }
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView()
+        NavigationStack{
+            ListView()
+        }
     }
 }
