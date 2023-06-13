@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		E05AEB2A2A391E8F003C4AF4 /* QTodo_v1_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB292A391E8F003C4AF4 /* QTodo_v1_0App.swift */; };
-		E05AEB2C2A391E8F003C4AF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB2B2A391E8F003C4AF4 /* ContentView.swift */; };
 		E05AEB2E2A391E8F003C4AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05AEB2D2A391E8F003C4AF4 /* Assets.xcassets */; };
 		E05AEB312A391E8F003C4AF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05AEB302A391E8F003C4AF4 /* Preview Assets.xcassets */; };
+		E05AEB392A391EDA003C4AF4 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB382A391EDA003C4AF4 /* ListView.swift */; };
+		E05AEB3E2A391F3B003C4AF4 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB3D2A391F3B003C4AF4 /* TodoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E05AEB262A391E8F003C4AF4 /* QTodo-v1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QTodo-v1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05AEB292A391E8F003C4AF4 /* QTodo_v1_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTodo_v1_0App.swift; sourceTree = "<group>"; };
-		E05AEB2B2A391E8F003C4AF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E05AEB2D2A391E8F003C4AF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E05AEB302A391E8F003C4AF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E05AEB382A391EDA003C4AF4 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		E05AEB3D2A391F3B003C4AF4 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				E05AEB292A391E8F003C4AF4 /* QTodo_v1_0App.swift */,
-				E05AEB2B2A391E8F003C4AF4 /* ContentView.swift */,
+				E05AEB3A2A391F0D003C4AF4 /* Models */,
+				E05AEB372A391EC2003C4AF4 /* Views */,
 				E05AEB2D2A391E8F003C4AF4 /* Assets.xcassets */,
 				E05AEB2F2A391E8F003C4AF4 /* Preview Content */,
 			);
@@ -65,6 +68,22 @@
 				E05AEB302A391E8F003C4AF4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E05AEB372A391EC2003C4AF4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E05AEB382A391EDA003C4AF4 /* ListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E05AEB3A2A391F0D003C4AF4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E05AEB3D2A391F3B003C4AF4 /* TodoModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E05AEB2C2A391E8F003C4AF4 /* ContentView.swift in Sources */,
+				E05AEB3E2A391F3B003C4AF4 /* TodoModel.swift in Sources */,
 				E05AEB2A2A391E8F003C4AF4 /* QTodo_v1_0App.swift in Sources */,
+				E05AEB392A391EDA003C4AF4 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
