@@ -12,6 +12,7 @@
 		E05AEB312A391E8F003C4AF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05AEB302A391E8F003C4AF4 /* Preview Assets.xcassets */; };
 		E05AEB392A391EDA003C4AF4 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB382A391EDA003C4AF4 /* ListView.swift */; };
 		E05AEB3E2A391F3B003C4AF4 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB3D2A391F3B003C4AF4 /* TodoModel.swift */; };
+		E05AEB402A392255003C4AF4 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB3F2A392255003C4AF4 /* TodoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		E05AEB302A391E8F003C4AF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E05AEB382A391EDA003C4AF4 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		E05AEB3D2A391F3B003C4AF4 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
+		E05AEB3F2A392255003C4AF4 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				E05AEB382A391EDA003C4AF4 /* ListView.swift */,
+				E05AEB3F2A392255003C4AF4 /* TodoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			files = (
 				E05AEB3E2A391F3B003C4AF4 /* TodoModel.swift in Sources */,
 				E05AEB2A2A391E8F003C4AF4 /* QTodo_v1_0App.swift in Sources */,
+				E05AEB402A392255003C4AF4 /* TodoView.swift in Sources */,
 				E05AEB392A391EDA003C4AF4 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +306,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kubilay.QTodo-v1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -331,6 +338,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kubilay.QTodo-v1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
