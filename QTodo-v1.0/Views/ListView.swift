@@ -13,27 +13,32 @@ struct ListView: View {
     
     var body: some View {
         ZStack{
-            List {
-                ForEach(listViewModel.todos) { todo in
-                    TodoView(todo: todo)
-                        .swipeActions {
-                            Button(role: .destructive) {
-                                listViewModel.deleteTodo(todo: todo)
-                            } label: {
-                                Image(systemName: "trash")
+            if listViewModel.todos.isEmpty {
+                EmptyListView()
+                    .transition(AnyTransition.opacity.animation(.easeIn(duration: 0.8)))
+            } else {
+                List {
+                    ForEach(listViewModel.todos) { todo in
+                        TodoView(todo: todo)
+                            .swipeActions {
+                                Button(role: .destructive) {
+                                    listViewModel.deleteTodo(todo: todo)
+                                } label: {
+                                    Image(systemName: "trash")
+                                }
+                                .tint(.red)
                             }
-                            .tint(.red)
-                        }
-                        .onTapGesture {
-                            withAnimation(.easeIn) {
-                                listViewModel.toggleTodo(todo: todo)
+                            .onTapGesture {
+                                withAnimation(.easeIn) {
+                                    listViewModel.toggleTodo(todo: todo)
+                                }
                             }
-                        }
+                    }
+                    .onMove(perform: listViewModel.moveTodos)
+                    .padding(.vertical, 5)
                 }
-                .onMove(perform: listViewModel.moveTodos)
-                .padding(.vertical, 5)
+                .listStyle(.grouped)
             }
-            .listStyle(.grouped) 
         }
         
         .navigationTitle("QTodo v1.0")
