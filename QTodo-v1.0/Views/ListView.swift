@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     
-    @StateObject var listViewModel: ListViewModel = ListViewModel()
+    @EnvironmentObject var listViewModel: ListViewModel
     
     var body: some View {
         ZStack{
