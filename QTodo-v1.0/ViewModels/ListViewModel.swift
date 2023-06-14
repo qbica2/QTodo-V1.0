@@ -38,4 +38,10 @@ class ListViewModel: ObservableObject {
         let newTodo = TodoModel(content: content, isCompleted: false)
         todos.append(newTodo)
     }
+    
+    func toggleTodo(todo: TodoModel) {
+        if let index = todos.firstIndex(where: {$0.id == todo.id}) {
+            todos[index] = todo.toggleCompletion()
+        }
+    }
 }
