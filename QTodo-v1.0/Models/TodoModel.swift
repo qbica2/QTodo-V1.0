@@ -8,7 +8,17 @@
 import Foundation
 
 struct TodoModel: Identifiable {
-    let id: String = UUID().uuidString
+    let id: String
     let content: String
     let isCompleted: Bool
+    
+    init(id: String = UUID().uuidString ,content: String, isCompleted: Bool) {
+        self.id = id
+        self.content = content
+        self.isCompleted = isCompleted
+    }
+    
+    func toggleCompletion() -> TodoModel {
+        return TodoModel(id: id, content: content, isCompleted: !isCompleted)
+    }
 }
