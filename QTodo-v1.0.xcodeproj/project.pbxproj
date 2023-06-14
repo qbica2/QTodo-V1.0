@@ -13,6 +13,7 @@
 		E05AEB392A391EDA003C4AF4 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB382A391EDA003C4AF4 /* ListView.swift */; };
 		E05AEB3E2A391F3B003C4AF4 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB3D2A391F3B003C4AF4 /* TodoModel.swift */; };
 		E05AEB402A392255003C4AF4 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB3F2A392255003C4AF4 /* TodoView.swift */; };
+		E05AEB422A39BED2003C4AF4 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB412A39BED2003C4AF4 /* AddTodoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		E05AEB382A391EDA003C4AF4 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		E05AEB3D2A391F3B003C4AF4 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		E05AEB3F2A392255003C4AF4 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
+		E05AEB412A39BED2003C4AF4 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				E05AEB382A391EDA003C4AF4 /* ListView.swift */,
 				E05AEB3F2A392255003C4AF4 /* TodoView.swift */,
+				E05AEB412A39BED2003C4AF4 /* AddTodoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				E05AEB2A2A391E8F003C4AF4 /* QTodo_v1_0App.swift in Sources */,
 				E05AEB402A392255003C4AF4 /* TodoView.swift in Sources */,
 				E05AEB392A391EDA003C4AF4 /* ListView.swift in Sources */,
+				E05AEB422A39BED2003C4AF4 /* AddTodoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
