@@ -25,6 +25,7 @@ struct ListView: View {
                             .tint(.red)
                         }
                 }
+                .onMove(perform: listViewModel.moveTodos)
                 .padding(.vertical, 5)
             }
             .listStyle(.grouped) 
@@ -40,7 +41,10 @@ struct ListView: View {
                         .tint(.primary)
                 }
             }
-
+            
+            ToolbarItem(placement: .navigationBarLeading) {
+                EditButton()
+            }
         }
 
     }
