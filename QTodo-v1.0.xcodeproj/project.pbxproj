@@ -17,6 +17,7 @@
 		E05AEB452A39D473003C4AF4 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB442A39D473003C4AF4 /* ListViewModel.swift */; };
 		E05AEB472A3A0392003C4AF4 /* ErrorSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB462A3A0392003C4AF4 /* ErrorSheetView.swift */; };
 		E05AEB492A3A07D3003C4AF4 /* ErrorSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB482A3A07D2003C4AF4 /* ErrorSheetViewModel.swift */; };
+		E05AEB4B2A3A5BDE003C4AF4 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB4A2A3A5BDE003C4AF4 /* EmptyListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E05AEB442A39D473003C4AF4 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		E05AEB462A3A0392003C4AF4 /* ErrorSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorSheetView.swift; sourceTree = "<group>"; };
 		E05AEB482A3A07D2003C4AF4 /* ErrorSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorSheetViewModel.swift; sourceTree = "<group>"; };
+		E05AEB4A2A3A5BDE003C4AF4 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				E05AEB3F2A392255003C4AF4 /* TodoView.swift */,
 				E05AEB412A39BED2003C4AF4 /* AddTodoView.swift */,
 				E05AEB462A3A0392003C4AF4 /* ErrorSheetView.swift */,
+				E05AEB4A2A3A5BDE003C4AF4 /* EmptyListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				E05AEB472A3A0392003C4AF4 /* ErrorSheetView.swift in Sources */,
 				E05AEB392A391EDA003C4AF4 /* ListView.swift in Sources */,
 				E05AEB422A39BED2003C4AF4 /* AddTodoView.swift in Sources */,
+				E05AEB4B2A3A5BDE003C4AF4 /* EmptyListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
