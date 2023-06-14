@@ -11,6 +11,7 @@ import SwiftUI
 struct QTodo_v1_0App: App {
     
     @StateObject var listViewModel: ListViewModel = ListViewModel()
+    @StateObject var errorSheetViewModel: ErrorSheetViewModel = ErrorSheetViewModel()
     
     var body: some Scene {
         WindowGroup {
@@ -18,6 +19,7 @@ struct QTodo_v1_0App: App {
                 ListView()
             }
             .environmentObject(listViewModel)
+            .environmentObject(errorSheetViewModel)
         }
     }
 }
