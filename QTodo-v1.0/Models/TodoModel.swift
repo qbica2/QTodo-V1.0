@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TodoModel: Identifiable {
+struct TodoModel: Identifiable, Codable {
     let id: String
     let content: String
     let isCompleted: Bool
