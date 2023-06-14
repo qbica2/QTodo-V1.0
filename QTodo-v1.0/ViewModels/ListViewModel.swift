@@ -19,16 +19,16 @@ class ListViewModel: ObservableObject {
         getTodos()
     }
     
-    func getTodos(){
-        if let savedTodosData = UserDefaults.standard.data(forKey: "todos") {
-            let decoder = JSONDecoder()
-            if let savedTodos = try? decoder.decode([TodoModel].self, from: savedTodosData) {
-                todos = savedTodos
-                return
-            }
+    func getTodos() {
+        guard let savedTodosData = UserDefaults.standard.data(forKey: "todos"),
+              let savedTodos = try? JSONDecoder().decode([TodoModel].self, from: savedTodosData) else {
+            todos = []
+            return
         }
+        
+        todos = savedTodos
     }
-    
+
     func deleteTodo(todo: TodoModel) {
         if let index = todos.firstIndex(where: {$0.id == todo.id}) {
             todos.remove(at: index)
