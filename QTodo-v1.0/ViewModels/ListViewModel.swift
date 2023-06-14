@@ -29,4 +29,8 @@ class ListViewModel: ObservableObject {
             todos.remove(at: index)
         }
     }
+    
+    func moveTodos(from indexSet: IndexSet, to newIndex: Int) {
+        todos.move(fromOffsets: indexSet, toOffset: newIndex)
+    }
 }
