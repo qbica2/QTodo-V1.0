@@ -28,6 +28,18 @@ struct ListView: View {
         }
         
         .navigationTitle("QTodo v1.0")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink {
+                    AddTodoView()
+                } label: {
+                    Image(systemName: "plus.circle.fill")
+                        .tint(.primary)
+                }
+            }
+
+        }
+
     }
 }
 
