@@ -9,18 +9,21 @@ import SwiftUI
 
 struct ListView: View {
     
-    @State private var todos: [TodoModel] = [
-        TodoModel(content: "firstTodo", isCompleted: true),
-        TodoModel(content: "secondTodo", isCompleted: false),TodoModel(content: "qweqweqw", isCompleted: false),
-        TodoModel(content: "asdasdas", isCompleted: false),TodoModel(content: "faggfgfgf", isCompleted: true),
-        TodoModel(content: "eererere", isCompleted: true)
-    ]
+    @StateObject var listViewModel: ListViewModel = ListViewModel()
     
     var body: some View {
         ZStack{
             List {
-                ForEach(todos) { todo in
+                ForEach(listViewModel.todos) { todo in
                     TodoView(todo: todo)
+                        .swipeActions {
+                            Button(role: .destructive) {
+                                listViewModel.deleteTodo(todo: todo)
+                            } label: {
+                                Image(systemName: "trash")
+                            }
+                            .tint(.red)
+                        }
                 }
                 .padding(.vertical, 5)
             }
