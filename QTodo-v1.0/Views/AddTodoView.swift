@@ -49,9 +49,15 @@ struct AddTodoView: View {
 
 extension AddTodoView {
     
-    func isTodoTextValid() -> Bool {
-        if todoText.count < 3 {
-            errorSheetViewModel.changeErrorMessage(message: "Your new todo must be at least 3 characters long!!!")
+    func isTodoTextValid(trimmedText: String) -> Bool {
+        if trimmedText.isEmpty {
+            errorSheetViewModel.changeErrorMessage(message: "Please enter a valid todo!")
+            errorSheetViewModel.toggleErrorSheetView()
+            return false
+        }
+        
+        if trimmedText.count < 3 {
+            errorSheetViewModel.changeErrorMessage(message: "Your new todo must be at least 3 characters long!")
             errorSheetViewModel.toggleErrorSheetView()
             return false
         }
@@ -60,8 +66,10 @@ extension AddTodoView {
     }
     
     func saveButtonPressed(){
-        if isTodoTextValid() {
-            listViewModel.addTodo(content: todoText)
+        let trimmedText = todoText.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if isTodoTextValid(trimmedText: trimmedText) {
+            listViewModel.addTodo(content: trimmedText)
             presentationMode.wrappedValue.dismiss()
         }
     }
