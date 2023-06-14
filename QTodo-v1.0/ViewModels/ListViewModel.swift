@@ -23,4 +23,10 @@ class ListViewModel: ObservableObject {
         
         todos.append(contentsOf: [todoNumberOne, todoNumberTwo, todoNumberThree, todoNumberFour])
     }
+    
+    func deleteTodo(todo: TodoModel) {
+        if let index = todos.firstIndex(where: {$0.id == todo.id}) {
+            todos.remove(at: index)
+        }
+    }
 }
