@@ -24,6 +24,11 @@ struct ListView: View {
                             }
                             .tint(.red)
                         }
+                        .onTapGesture {
+                            withAnimation(.easeIn) {
+                                listViewModel.toggleTodo(todo: todo)
+                            }
+                        }
                 }
                 .onMove(perform: listViewModel.moveTodos)
                 .padding(.vertical, 5)
@@ -55,5 +60,6 @@ struct ListView_Previews: PreviewProvider {
         NavigationStack{
             ListView()
         }
+        .environmentObject(ListViewModel())
     }
 }
