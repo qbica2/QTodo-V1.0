@@ -9,11 +9,15 @@ import SwiftUI
 
 @main
 struct QTodo_v1_0App: App {
+    
+    @StateObject var listViewModel: ListViewModel = ListViewModel()
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack{
                 ListView()
             }
+            .environmentObject(listViewModel)
         }
     }
 }
