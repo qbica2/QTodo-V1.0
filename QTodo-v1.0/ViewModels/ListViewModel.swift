@@ -33,4 +33,9 @@ class ListViewModel: ObservableObject {
     func moveTodos(from indexSet: IndexSet, to newIndex: Int) {
         todos.move(fromOffsets: indexSet, toOffset: newIndex)
     }
+    
+    func addTodo(content: String) {
+        let newTodo = TodoModel(content: content, isCompleted: false)
+        todos.append(newTodo)
+    }
 }
