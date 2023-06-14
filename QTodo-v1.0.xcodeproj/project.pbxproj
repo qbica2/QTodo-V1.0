@@ -14,6 +14,7 @@
 		E05AEB3E2A391F3B003C4AF4 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB3D2A391F3B003C4AF4 /* TodoModel.swift */; };
 		E05AEB402A392255003C4AF4 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB3F2A392255003C4AF4 /* TodoView.swift */; };
 		E05AEB422A39BED2003C4AF4 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB412A39BED2003C4AF4 /* AddTodoView.swift */; };
+		E05AEB452A39D473003C4AF4 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AEB442A39D473003C4AF4 /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E05AEB3D2A391F3B003C4AF4 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		E05AEB3F2A392255003C4AF4 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
 		E05AEB412A39BED2003C4AF4 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		E05AEB442A39D473003C4AF4 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				E05AEB292A391E8F003C4AF4 /* QTodo_v1_0App.swift */,
 				E05AEB3A2A391F0D003C4AF4 /* Models */,
 				E05AEB372A391EC2003C4AF4 /* Views */,
+				E05AEB432A39D451003C4AF4 /* ViewModels */,
 				E05AEB2D2A391E8F003C4AF4 /* Assets.xcassets */,
 				E05AEB2F2A391E8F003C4AF4 /* Preview Content */,
 			);
@@ -90,6 +93,14 @@
 				E05AEB3D2A391F3B003C4AF4 /* TodoModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E05AEB432A39D451003C4AF4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E05AEB442A39D473003C4AF4 /* ListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 			files = (
 				E05AEB3E2A391F3B003C4AF4 /* TodoModel.swift in Sources */,
 				E05AEB2A2A391E8F003C4AF4 /* QTodo_v1_0App.swift in Sources */,
+				E05AEB452A39D473003C4AF4 /* ListViewModel.swift in Sources */,
 				E05AEB402A392255003C4AF4 /* TodoView.swift in Sources */,
 				E05AEB392A391EDA003C4AF4 /* ListView.swift in Sources */,
 				E05AEB422A39BED2003C4AF4 /* AddTodoView.swift in Sources */,
