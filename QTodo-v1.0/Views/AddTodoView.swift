@@ -9,6 +9,10 @@ import SwiftUI
 
 struct AddTodoView: View {
     
+    @EnvironmentObject var listViewModel: ListViewModel
+    @EnvironmentObject var errorSheetViewModel: ErrorSheetViewModel
+    @Environment(\.presentationMode) var presentationMode
+    
     @State var todoText: String = ""
     
     var body: some View {
@@ -19,7 +23,7 @@ struct AddTodoView: View {
                 .cornerRadius(10)
             
             Button {
-                
+                saveButtonPressed()
             } label: {
                 Text("Save".uppercased())
                     .foregroundColor(.white)
@@ -34,6 +38,32 @@ struct AddTodoView: View {
         .padding()
         .padding(.vertical, 10)
         .navigationTitle("Add Todo ✏️")
+        .sheet(isPresented: $errorSheetViewModel.showErrorSheetView) {
+            ErrorSheetView()
+                .presentationDetents([.height(300)])
+        }
+    }
+}
+
+//MARK: - Functions
+
+extension AddTodoView {
+    
+    func isTodoTextValid() -> Bool {
+        if todoText.count < 3 {
+            errorSheetViewModel.changeErrorMessage(message: "Your new todo must be at least 3 characters long!!!")
+            errorSheetViewModel.toggleErrorSheetView()
+            return false
+        }
+        
+        return true
+    }
+    
+    func saveButtonPressed(){
+        if isTodoTextValid() {
+            listViewModel.addTodo(content: todoText)
+            presentationMode.wrappedValue.dismiss()
+        }
     }
 }
 
@@ -42,5 +72,6 @@ struct AddTodoView_Previews: PreviewProvider {
         NavigationStack{
             AddTodoView()
         }
+        .environmentObject(ErrorSheetViewModel())
     }
 }
